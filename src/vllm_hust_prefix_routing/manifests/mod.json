@@ -1,0 +1,63 @@
+{
+  "schema": "prefix-routing-extraction/v1",
+  "extension_id": "org.vllm-hust.prefix-routing",
+  "name": "Legacy Prefix-aware Routing Mod",
+  "version": "0.1.0.dev4",
+  "state": "runtime023_no_source_edits_candidate",
+  "source_pr": "https://github.com/intellistream/vllm-hust-legacy-20260831/pull/173",
+  "source_head": "feeb41719d168be598f2287be5d9a1d615c6c27c",
+  "source_merge": "6a71cd4bcf2dd74087acdbf7865ef93e738b79fd",
+  "carrier_base": "eb0e8db1139c4b96608e2c0b9ca6f14c7177ef81",
+  "protocol": "prefix-routing-runtime023/v1",
+  "activation": "vllm.general_plugins_plus_existing_ASGI_middleware",
+  "extension_manager_certified": false,
+  "default_enabled": false,
+  "entrypoint": "vllm_hust_prefix_routing.plugin:register",
+  "kill_switch": "VLLM_HUST_PREFIX_ROUTING_KILL_SWITCH",
+  "restart_required": true,
+  "components": [
+    {
+      "id": "routing",
+      "env": "VLLM_HUST_PREFIX_ROUTING_ROUTING",
+      "default": false,
+      "mechanisms": [
+        "cache_index",
+        "routing_policy",
+        "production_keys",
+        "proxy"
+      ]
+    },
+    {
+      "id": "http_events",
+      "env": "VLLM_HUST_PREFIX_ROUTING_HTTP_EVENTS",
+      "default": false,
+      "mechanisms": [
+        "incremental_upload",
+        "snapshot_reconciliation"
+      ]
+    },
+    {
+      "id": "zmq_replay",
+      "env": "VLLM_HUST_PREFIX_ROUTING_ZMQ_REPLAY",
+      "default": false,
+      "mechanisms": [
+        "epoch_sequence_replay",
+        "snapshot_reconciliation"
+      ]
+    }
+  ],
+  "host_patch": null,
+  "ascend_adapter": "none; Core event contract is device-neutral; no current Ascend SHA qualified",
+  "permissions": [
+    "explicit_outbound_http_to_configured_replicas",
+    "configured_kv_event_ingress",
+    "configured_zmq_pub_replay",
+    "optional_local_status_files"
+  ],
+  "compatibility": "Read-only Source 0.23 fingerprint admission; runtime middleware and publisher registry; real inference pending",
+  "source_modified": false,
+  "unsupported_runtime_components": [
+    "http_events"
+  ],
+  "legacy_protocol": "prefix-routing-pr173/v1"
+}

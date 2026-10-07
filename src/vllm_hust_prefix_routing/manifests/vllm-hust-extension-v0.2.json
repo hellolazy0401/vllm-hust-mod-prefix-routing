@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.2-experimental",
+  "extension_id": "org.vllm-hust.prefix-routing",
+  "extension_version": "0.1.0.dev4",
+  "kind": "in_process_plugin",
+  "host": {
+    "provider": "vllm",
+    "name": "vllm",
+    "version_range": ">=0.23,<0.24"
+  },
+  "runtime": {
+    "type": "python",
+    "process_scope": "vllm-processes",
+    "isolation": "trusted_in_process"
+  },
+  "lifecycle_owner": "vllm",
+  "protocols": [
+    {
+      "name": "vllm.general_plugins",
+      "version_range": null
+    },
+    {
+      "name": "prefix-routing-runtime023/v1",
+      "version_range": null
+    }
+  ],
+  "implementation": [
+    {
+      "type": "python_entry_point",
+      "group": "vllm.general_plugins",
+      "name": "prefix_routing_pr173"
+    }
+  ],
+  "requires_services": [],
+  "components": [],
+  "activation": {
+    "entry_points": [
+      {
+        "group": "vllm.general_plugins",
+        "name": "prefix_routing_pr173"
+      }
+    ],
+    "environment": {
+      "VLLM_HUST_PREFIX_ROUTING_ENABLE": "1",
+      "VLLM_HUST_PREFIX_ROUTING_BACKEND": "runtime023-v1",
+      "VLLM_HUST_PREFIX_ROUTING_ROUTING": "1",
+      "VLLM_HUST_PREFIX_ROUTING_ZMQ_REPLAY": "1"
+    },
+    "additional_config": {
+      "prefix_routing_mod_provenance": {
+        "admission_status": "runtime023_cpu_candidate_no_npu_measurement",
+        "source_core": "feeb41719d168be598f2287be5d9a1d615c6c27c",
+        "carrier_base": "eb0e8db1139c4b96608e2c0b9ca6f14c7177ef81",
+        "source_pr": 173,
+        "ancestor_prs": [
+          80,
+          154,
+          170
+        ],
+        "evidence_ids": [
+          "PR173-REGEN-001"
+        ],
+        "source023_adapter_available": true,
+        "performance_verified": false,
+        "version_range_is_not_source_admission": true
+      }
+    }
+  }
+}

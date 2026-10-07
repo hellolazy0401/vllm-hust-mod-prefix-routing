@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vllm-hust-prefix-routing"
+dynamic = ["version"]
+description = "Auditable extraction of Legacy Core PR 173 prefix-aware routing"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+dependencies = []
+
+[project.optional-dependencies]
+runtime = ["aiohttp>=3.9", "msgspec>=0.18", "pyzmq>=25", "fastapi>=0.110"]
+test = ["pytest>=8", "pytest-asyncio>=0.23", "httpx>=0.27", "uvicorn>=0.29", "build>=1"]
+
+[project.entry-points."vllm.general_plugins"]
+prefix_routing_pr173 = "vllm_hust_prefix_routing.plugin:register"
+
+[project.entry-points."vllm_hust.extension_bundles"]
+"org.vllm-hust.prefix-routing" = "vllm_hust_prefix_routing.manifests"
+
+[tool.setuptools.dynamic]
+version = {attr = "vllm_hust_prefix_routing._version.__version__"}
+
+[project.scripts]
+vllm-hust-prefix-routing = "vllm_hust_prefix_routing.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+vllm_hust_prefix_routing = ["manifests/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/local"]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+markers = ["skip_global_cleanup: retained upstream marker; no cleanup plugin in isolated tests"]

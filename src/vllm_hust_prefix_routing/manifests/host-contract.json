@@ -1,0 +1,43 @@
+{
+  "protocol": "prefix-routing-pr173/v1",
+  "base_sha": "eb0e8db1139c4b96608e2c0b9ca6f14c7177ef81",
+  "source_head": "feeb41719d168be598f2287be5d9a1d615c6c27c",
+  "files": {
+    "vllm/config/kv_events.py": {
+      "base_sha256": "b1dbaee3e6830e381e9157fe3bab0d65c357da88ff7cdf8b1e4b3a4e75c82a87",
+      "patched_sha256": "fe5f46ba01d42c9598e29c201aaa3c3f177b95ac04e5eb4ad8aeb339d694f8e1"
+    },
+    "vllm/distributed/kv_events.py": {
+      "base_sha256": "f566d4756ab562f7851806a1471f9a580682d6a6b2637d6a2e99580e5fa42756",
+      "patched_sha256": "7e756dfeb0a8b88cf9ebe16190bec9874c62395fbbb0660269063af34109448f"
+    },
+    "vllm/entrypoints/openai/api_server.py": {
+      "base_sha256": "5eea57d63c15b209ee6b6f1f79b18f395108f9cb3d18f3621d6b5bb8cb48b43a",
+      "patched_sha256": "e006b6cc2f2a5a50438c55454c7f0d4a0df62f15fa37f7bbdd55e03133952b8b"
+    },
+    "vllm/entrypoints/openai/cli_args.py": {
+      "base_sha256": "b10da703f00977dcbbd379f6e0898087a8036693258c4d0c066a2a99b19b0334",
+      "patched_sha256": "2065c049918377737958d96168a720b7239f667ee21b8c25dab42e889aabb7be"
+    },
+    "vllm/entrypoints/serve/utils/server_utils.py": {
+      "base_sha256": "cf93a59d8f57596e9435220ea5542e124bd1fa29edf85524978a5718d491d013",
+      "patched_sha256": "ccf6bbfdf18d5363d5e69b7488a9e80a832414be5a01c19494bfa940dca073fb"
+    },
+    "vllm/v1/core/block_pool.py": {
+      "base_sha256": "36587e80d2dc264105fa93a721ae2cc9c9af619d91e99485ceffc753e1a6aaec",
+      "patched_sha256": "c3e3175b161c2b9af24775a993aff85c4ef59f42d3300746ceb68a70624d8870"
+    },
+    "vllm/v1/core/kv_cache_coordinator.py": {
+      "base_sha256": "f7acb18bd46758ba77e4b438e781e35122da9b8ae95c775ef44c2a74ef323552",
+      "patched_sha256": "5b51aaaab849da8b4b1573d2d7d44c2a5aa10096d5c0749d32bb736eb868ae64"
+    },
+    "vllm/v1/core/kv_cache_manager.py": {
+      "base_sha256": "159a22c97bf185b4fc1c154778e023ee56891a1ccc9f6c26077a0f534e249420",
+      "patched_sha256": "448c785e1888763a04fc27b8604395ed4b999a2687156c1d32f92b8c39dcf2ce"
+    },
+    "vllm/v1/core/sched/scheduler.py": {
+      "base_sha256": "1e250dbc5baeb173fac7e755e075f1003512aeeb9855196d9af57a54b98488a6",
+      "patched_sha256": "0d14e7f8bd24394c9296adeece74b663a9cd53dbe1c72c97102f4f786e0973bc"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "campaign": "prefix-routing-dev4-c1-c16-3r-20261006",
+  "model": "/models/Qwen3.5-35B-A3B",
+  "profile": "/root/workspace/prefix-routing-campaign-dev4/deployment/configs/qwen35-dual.json",
+  "core": "/vllm-workspace/vllm",
+  "ascend": "/vllm-workspace/vllm-ascend",
+  "bench": "/root/workspace/swe-prefix-reuse",
+  "swe_client": "/root/workspace/swe-prefix-reuse/.venv-bench/bin/swe-prefix-reuse",
+  "workload": "/root/workspace/swe-prefix-reuse/prepared/qwen35.json",
+  "concurrencies": [1, 2, 4, 8, 16],
+  "control_concurrencies": [1, 8, 16],
+  "duration_seconds": 900,
+  "startup_timeout_seconds": 1800,
+  "control_requests": 400,
+  "positive_prefixes": 20,
+  "ttft_p95_ratio_limit": 1.05,
+  "primary_cells": [8, 16],
+  "negative_effect_equivalence_margin": 0.05,
+  "protocol_note": "Freeze before measurements. 3 pairs yield exploratory uncertainty. Each run starts fresh independent TP2+EP replicas. APC on in both arms; utility-victim off. No request DP affinity."
+}

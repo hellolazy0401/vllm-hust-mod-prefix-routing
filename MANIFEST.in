@@ -1,0 +1,8 @@
+include LICENSE NOTICE README.md campaign.json
+recursive-include src *.json
+recursive-include tests *.py
+recursive-include scripts *.py *.sh
+recursive-include docs *.md
+recursive-include deployment *.json *.sh
+recursive-include benchmarks *.py
+recursive-include evidence *.py *.sh

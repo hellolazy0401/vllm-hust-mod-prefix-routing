@@ -1,0 +1,14 @@
+This package contains code derived from:
+  intellistream/vllm-hust-legacy-20260831, PR #173
+  Head: feeb41719d168be598f2287be5d9a1d615c6c27c
+  Merge: 6a71cd4bcf2dd74087acdbf7865ef93e738b79fd
+Copyright contributors to the vLLM project.
+The upstream code is licensed under Apache License 2.0.
+
+Extraction changes include package namespace relocation, explicit host source
+hooks, exact source-contract validation, default-off component switches,
+process-local counters, stricter routing configuration validation, package
+metadata, local test isolation, adapted benchmark activation, and Chinese docs.
+The original PR source, diff and metadata are retained under evidence/.
+No affiliation, production certification or measured performance improvement
+for this extracted package is implied.

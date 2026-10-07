@@ -1,0 +1,94 @@
+{
+  "protocol": "prefix-routing-source023/v1",
+  "files": {
+    "vllm/config/kv_events.py": [
+      {
+        "name": "source",
+        "before": "b1dbaee3e6830e381e9157fe3bab0d65c357da88ff7cdf8b1e4b3a4e75c82a87",
+        "after": "fe5f46ba01d42c9598e29c201aaa3c3f177b95ac04e5eb4ad8aeb339d694f8e1",
+        "payload": "source023/vllm/config/kv_events.py"
+      }
+    ],
+    "vllm/distributed/kv_events.py": [
+      {
+        "name": "source",
+        "before": "24841685ad6db3543a19b9639eea24e1992ab37c4773c775da9f4140bb813322",
+        "after": "ad6ac5329b00929058607a3475f009b1c7d3121a6eb4e6efeca7d6783d92dcbe",
+        "payload": "source023/vllm/distributed/kv_events.py"
+      }
+    ],
+    "vllm/entrypoints/openai/api_server.py": [
+      {
+        "name": "source",
+        "before": "6d8df133280618a1afffa9d03e4655af011f2f94ced0f90c15f7fc8b0afc538f",
+        "after": "4dae6ab3fc862b88b574cc688a1f113eebf5636c3ffa54c989ae9bc583ba01f1",
+        "payload": "source023/vllm/entrypoints/openai/api_server.py"
+      }
+    ],
+    "vllm/entrypoints/openai/cli_args.py": [
+      {
+        "name": "source",
+        "before": "b10da703f00977dcbbd379f6e0898087a8036693258c4d0c066a2a99b19b0334",
+        "after": "2065c049918377737958d96168a720b7239f667ee21b8c25dab42e889aabb7be",
+        "payload": "source023/vllm/entrypoints/openai/cli_args.py"
+      }
+    ],
+    "vllm/entrypoints/serve/utils/server_utils.py": [
+      {
+        "name": "source",
+        "before": "89d1c41d180150b0099ff758143af7b8822f27082822ac01029821dd16728348",
+        "after": "54e3613329905b30803ff404c700cc5b98890ee5f4afc2ebb03586a0590239fe",
+        "payload": "source023/vllm/entrypoints/serve/utils/server_utils.py"
+      }
+    ],
+    "vllm/v1/core/block_pool.py": [
+      {
+        "name": "source",
+        "before": "84755b84c36ed6460ceefe2690c9484a9c31488c5da6daa6c918f497d8837dee",
+        "after": "aac43078cdc5448ff54c356c1888d3b7868ba7106754dcab0cc36bc20686f049",
+        "payload": "source023/vllm/v1/core/block_pool.py"
+      }
+    ],
+    "vllm/v1/core/kv_cache_coordinator.py": [
+      {
+        "name": "source",
+        "before": "aeca063d319413d2bd0f094158a16be08c2a4c9b1c96a21617f97936c23bd9ce",
+        "after": "28806d4fcf6aff0661ef81844551a5a33a64da2ed96fbd5af3648e90f07f5726",
+        "payload": "source023/vllm/v1/core/kv_cache_coordinator.py"
+      }
+    ],
+    "vllm/v1/core/kv_cache_manager.py": [
+      {
+        "name": "source",
+        "before": "a69aa08062714b40b149648bbec031a42d22e422fbf9543cd10fbd12d2496edb",
+        "after": "fb3d4e98fdb4d9984f065831fa14e8f7b42636171c752c50b4d060293b9106a7",
+        "payload": "source023/vllm/v1/core/kv_cache_manager.py"
+      }
+    ],
+    "vllm/v1/core/sched/scheduler.py": [
+      {
+        "name": "source",
+        "before": "9ae1491f57a6294e32416b93ef2ea68107fa0d65c3a4d7f745f1261012f735e9",
+        "after": "80ea9b5e34e9871167c08eb5e88d71ceaf54ac8c68f34d4a15595f8bb7db4f82",
+        "payload": "source023/vllm/v1/core/sched/scheduler.py"
+      },
+      {
+        "name": "utility-dev2-disabled",
+        "before": "9b605fd2eae661a47113705c5eba7c9b5bc8495db63992cf71c60ab160da730f",
+        "after": "84035dabb6d7e830ff52969ab68a74e342d68616937e0689639e5a68e9552566",
+        "payload": "utility-overlay/vllm/v1/core/sched/scheduler.py"
+      }
+    ]
+  },
+  "references": {
+    "vllm/v1/core/kv_cache_utils.py": "b89f9afa7f95fcc30412ae2031d5370a23e95f35d068fa14e5824dce1c900ee5",
+    "vllm/v1/request.py": "4b97f41fc0ea474149f78d52a44ce89c16a9921c0641c48ad2573bdb8b7f71a4",
+    "vllm/v1/engine/input_processor.py": "c5673988c0f7cfec268220e3f044e718702c015a4f236c020937cfd40a793f15",
+    "vllm/entrypoints/openai/completion/serving.py": "c67bff55fa29c5f89000c3afdc9c7c66305612b13a8a1d85976e5872cee086d7",
+    "vllm/entrypoints/openai/chat_completion/serving.py": "b6f42caa8aa6b45ccaefd266c1ff8994e55e3e3ab41e829ed0fb9c454487d9a2",
+    "vllm/entrypoints/openai/engine/serving.py": "38b242a091b2b4502a58b7d9b8a274ac17611b383fecc30e9b714f5da9c8dc75",
+    "vllm/v1/kv_cache_interface.py": "8d6be98bbf75b3d55007b64ccf5afef047ca01790a432522f70a196412c103d9"
+  },
+  "source_head": "0fc695fc6d1d82e9a5ac6835ac8e4e1c83703665",
+  "qualification": "source_and_cpu_only_not_npu"
+}
